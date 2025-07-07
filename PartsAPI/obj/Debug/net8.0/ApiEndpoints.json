@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "PartsAPI.API.Controllers.PartController",
+    "Method": "CreatePart",
+    "RelativePath": "api/Part/CreatePart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "part",
+        "Type": "PartsAPI.Core.Entities.Part",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PartsAPI.API.Controllers.PartController",
+    "Method": "DeletePart",
+    "RelativePath": "api/Part/DeletePart",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "partNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PartsAPI.API.Controllers.PartController",
+    "Method": "GetPart",
+    "RelativePath": "api/Part/GetPart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PartsAPI.API.Controllers.PartController",
+    "Method": "GetParts",
+    "RelativePath": "api/Part/GetParts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PartsAPI.API.Controllers.PartController",
+    "Method": "UpdatePart",
+    "RelativePath": "api/Part/UpdatePart",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "part",
+        "Type": "PartsAPI.Core.Entities.Part",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

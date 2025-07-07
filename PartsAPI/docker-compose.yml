@@ -1,0 +1,18 @@
+﻿
+# docker-compose.yml
+version: '3.8'
+
+services:
+    db:
+      image: postgres:15
+      container_name: parts-postgres
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: partsdb
+        ports: 
+          -"5432:5432"
+        volumes:
+            -pgdata:/var/lib/postgressql/data
+volumes:
+    pgdata:

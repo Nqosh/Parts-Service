@@ -1,0 +1,174 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PartsAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Part/GetParts": {
+      "get": {
+        "tags": [
+          "Part"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Part/GetPart": {
+      "get": {
+        "tags": [
+          "Part"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Part/CreatePart": {
+      "post": {
+        "tags": [
+          "Part"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Part"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Part"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Part"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Part/UpdatePart": {
+      "put": {
+        "tags": [
+          "Part"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Part"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Part"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Part"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Part/DeletePart": {
+      "delete": {
+        "tags": [
+          "Part"
+        ],
+        "parameters": [
+          {
+            "name": "partNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Part": {
+        "required": [
+          "description",
+          "locationCode",
+          "partNumber",
+          "quantityOnHand"
+        ],
+        "type": "object",
+        "properties": {
+          "partNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "quantityOnHand": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "locationCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "lastStockTake": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

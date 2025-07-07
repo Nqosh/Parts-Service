@@ -1,0 +1,6 @@
+@PartsAPI_HostAddress = http://localhost:5049
+
+GET {{PartsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
