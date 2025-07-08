@@ -17,4 +17,8 @@
 - Go back to Visual Studio and run the Web API and a swagger solution should open like below:
 
   ![image](https://github.com/user-attachments/assets/7fde6477-5fc5-41e4-9a09-2f9cd1f1e3b8)
+  
+ - This is the Architecture of the Application below: 
+
+![image](https://github.com/user-attachments/assets/41f1b751-f231-46fb-b6f1-8dc00006fec2)
 
