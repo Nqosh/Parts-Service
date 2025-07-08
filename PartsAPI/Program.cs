@@ -30,7 +30,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//app.MapHealthChecks("/health");
+app.MapHealthChecks("/health");
 
 app.UseCors("CorsPolicy");
 

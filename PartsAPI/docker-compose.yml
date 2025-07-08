@@ -1,10 +1,11 @@
 ﻿
+
 # docker-compose.yml
 version: '3.8'
 
 services:
     db:
-      image: postgres:15
+      image: postgres:latest
       container_name: parts-postgres
       environment:
         POSTGRES_USER: postgres
@@ -13,6 +14,6 @@ services:
         ports: 
           -"5432:5432"
         volumes:
-            -pgdata:/var/lib/postgressql/data
+           -postgres_data:/var/lib/postgresql/data
 volumes:
     pgdata:

@@ -7,8 +7,6 @@ namespace PartsAPI.Infrastructure.Data
     public class PartRepository : IPartRepository
     {
         private readonly PartContext _context;
-
-        private static Random random = new Random();
         public PartRepository(PartContext context)
         {
             _context = context;
