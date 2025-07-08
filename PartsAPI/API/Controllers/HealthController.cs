@@ -18,7 +18,7 @@ namespace PartsAPI.API.Controllers
             _healthRepository = healthRepository;
         }
 
-        [HttpGet]
+        [HttpGet("health")]
         public async Task<IActionResult> GetHealth()
         {
             var canConnect = await _healthRepository.CanConnectToDatabaseAsync();

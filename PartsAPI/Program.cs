@@ -13,7 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices(builder.Configuration);
-//AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var app = builder.Build();
 
@@ -41,7 +41,7 @@ var context = services.GetRequiredService<PartContext>();
 
 try
 {
-    await context.Database.MigrateAsync();
+    //await context.Database.MigrateAsync();
     await PartContextSeed.SeedAsync(context);
 }
 catch (Exception ex)

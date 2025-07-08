@@ -51,7 +51,7 @@ namespace PartsApi.Tests
 
             var results = ValidateModel(part);
 
-            Assert.Contains(results, r => r.ErrorMessage!.Contains("QuantityOnHand"));
+            Assert.Contains(results, r => r.ErrorMessage!.Contains("Quantity must be >= 0"));
         }
 
         [Fact]

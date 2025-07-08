@@ -13,15 +13,15 @@ namespace PartsAPI.API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services,
        IConfiguration config)
         {
-            //services.AddDbContext<PartContext>(opt =>
-            //{
-            //    opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
-            //});
+            services.AddDbContext<PartContext>(opt =>
+            {
+                opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+            });
 
-            services.AddDbContext<PartContext>(x => x.UseSqlite(config.GetConnectionString("DefaultConnection")));
-            //services.AddHealthChecks().ad(config.GetConnectionString("DefaultConnection"));
+            services.AddHealthChecks();
             //services.AddHealthChecks().AddNpgSql(config.GetConnectionString("DefaultConnection"));
             services.AddScoped<IPartRepository, PartRepository>();
+            services.AddScoped<IHealthRepository, HealthRepository>();
             services.AddAutoMapper(typeof(PartProfile));
             services.AddCors(opt =>
             {
